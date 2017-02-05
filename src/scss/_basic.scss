@@ -1,0 +1,27 @@
+// Basic Styling
+
+* {
+  font-family: $font-sans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.85em;
+  color: $col-white;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: $font-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65em;
+}
+div, .box {
+  @include box;
+}
+body {
+  display: block;
+  &:after { @include pseudo-clear; }
+}
+
+.body-bg {
+  @include gradient;
+}
