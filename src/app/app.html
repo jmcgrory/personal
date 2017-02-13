@@ -1,0 +1,18 @@
+<div id="app_container">
+  <header id="app_header">
+    <h1>Jamie McGrory</h1>
+  </header>
+  <nav id="app_nav">
+    <div class="menu-contain">
+      <ul>
+        <li *ngFor="let item of menu">
+          <a routerLink="{{ item.link }}">{{ item.title }}</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="app-main">
+    <div class="app-relative">
+      <router-outlet></router-outlet>
+    </div>
+  </div>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Share:400,700|Open+Sans:300,400,700");
 * {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
@@ -8,17 +8,24 @@
   -webkit-font-smoothing: antialiased; }
 
 h1, h2, h3, h4 {
-  font-family: "Lora", serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.65em; }
+  font-family: "Share", cursive;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.65em;
+  margin: 0 auto; }
+
+a {
+  outline: none;
+  cursor: pointer; }
 
 div, .box {
   box-sizing: border-box;
   -webkit-box-sizing: border-box; }
 
 body {
-  display: block; }
+  display: block;
+  padding: 0;
+  margin: 0; }
   body:after {
     content: "";
     display: block;
@@ -26,9 +33,196 @@ body {
 
 .body-bg {
   background: #0e3747;
-  background: -moz-linear-gradient("45deg", #0e3747 1%, #254444 100%);
-  background: -webkit-linear-gradient("45deg", #0e3747 1%, #254444 100%);
-  background: linear-gradient("45deg", #0e3747 1%, #254444 100%);
+  background: -moz-linear-gradient(45deg, #0e3747 1%, #254444 100%);
+  background: -webkit-linear-gradient(45deg, #0e3747 1%, #254444 100%);
+  background: linear-gradient(45deg, #0e3747 1%, #254444 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e3747', endColorstr='#254444',GradientType=1 ); }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+.pseudo, .btn-dot-1:before, .btn-dot-1:after {
+  content: ' ';
+  display: block; }
+
+.full {
+  width: 100%; }
+
+.full-height {
+  height: 100%; }
+
+.table {
+  display: table; }
+
+.td {
+  display: table-cell; }
+
+.align-vert {
+  vertical-align: middle; }
+
+.txt-center {
+  text-align: center; }
+
+.txt-left {
+  text-align: left; }
+
+.txt-right {
+  text-align: right; }
+
+.txt-reg {
+  font-weight: 400; }
+
+.txt-bold {
+  font-weight: 700; }
+
+.txt-upper {
+  text-transform: uppercase; }
+
+.txt-caps {
+  text-transform: capitalize; }
+
+.bg-green-1 {
+  background: #254444; }
+
+.bg-green-2 {
+  background: #1c2525; }
+
+.bg-blue-1 {
+  background: #0e3747; }
+
+.bg-blue-2 {
+  background: #11191d; }
+
+.bg-dot-1, .btn-dot-1:before, .btn-dot-1:after {
+  background: url("img/bg/dot-1.png") repeat left top;
+  background-size: 4px; }
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em;
+  min-width: 180px;
+  text-transform: uppercase;
+  font-weight: 400; }
+
+.btn-dot-1 {
+  color: #fefefe;
+  border: 2px solid #fefefe;
+  position: relative;
+  -webkit-transition: 330ms ease;
+  -moz-transition: 330ms ease;
+  -ms-transition: 330ms ease;
+  -o-transition: 330ms ease;
+  transition: 330ms ease; }
+  .btn-dot-1:before, .btn-dot-1:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    -webkit-transition: 220ms ease;
+    -moz-transition: 220ms ease;
+    -ms-transition: 220ms ease;
+    -o-transition: 220ms ease;
+    transition: 220ms ease; }
+  .btn-dot-1:before {
+    top: -10px;
+    left: -10px; }
+  .btn-dot-1:after {
+    top: 10px;
+    left: 10px; }
+  .btn-dot-1:hover {
+    color: #11191d;
+    box-shadow: inset 200px 1px 7px #ffffff; }
+    .btn-dot-1:hover:before, .btn-dot-1:hover:after {
+      top: 0px;
+      left: 0px;
+      opacity: 0.3; }
+
+#app_container {
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 100vh; }
+  #app_container .app-main {
+    padding-right: 240px;
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    #app_container .app-main .app-relative {
+      position: relative;
+      width: 100%;
+      height: 100%; }
+
+#app_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1em; }
+  #app_header h1 {
+    line-height: 1;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase; }
+
+#app_nav {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 240px;
+  text-align: center;
+  background: #11191d;
+  background: -moz-linear-gradient(45deg, #11191d 1%, #1c2525 100%);
+  background: -webkit-linear-gradient(45deg, #11191d 1%, #1c2525 100%);
+  background: linear-gradient(45deg, #11191d 1%, #1c2525 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11191d', endColorstr='#1c2525',GradientType=1 ); }
+  #app_nav .menu-contain {
+    display: table;
+    height: 100%;
+    width: 100%; }
+  #app_nav ul {
+    display: table-cell;
+    vertical-align: middle; }
+    #app_nav ul li {
+      display: block;
+      font-size: 22px;
+      text-transform: uppercase; }
+      #app_nav ul li a {
+        padding: 1em;
+        display: block;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box; }
+
+#home_txt {
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-left: 4px; }
+  #home_txt h2 {
+    padding-left: 17px; }
+  #home_txt p {
+    margin-bottom: 2.65em; }
+
+.bg-panel {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0.2; }
+  .bg-panel.bg-panel-design {
+    left: 0;
+    background: #efefef; }
+  .bg-panel.bg-panel-develop {
+    left: 50%;
+    background: #fefefe; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,21 @@
+#home_txt {
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-left: 4px;
+
+  h2 { padding-left: 17px; }
+  p { margin-bottom: 2.65em; }
+}
+
+.bg-panel {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0.2;
+
+  &.bg-panel-design { left: 0; background: #efefef; }
+  &.bg-panel-develop { left: 50%; background: #fefefe; }
+}
