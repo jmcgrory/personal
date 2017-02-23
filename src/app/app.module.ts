@@ -1,46 +1,28 @@
 // Modules
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes, PreloadAllModules }   from '@angular/router';
+import { NgModule, OnInit }         from '@angular/core';
+import { BrowserModule }            from '@angular/platform-browser';
+import { AppRoutingModule }         from './routing.module';
+import { HttpModule }               from '@angular/http';
 
 // Components
-import { AppComponent }  from './app.component';
-import { HomeComponent }  from './home/home.component';
-import { PortfolioComponent }  from './portfolio/portfolio.component';
-import { SkillsComponent }  from './skills/skills.component';
-import { BlogComponent }  from './blog/blog.component';
-import { ContactComponent }  from './contact/contact.component';
+import { AppComponent }             from './app.component';
+import { HomeComponent }            from './home/home.component';
+import { PortfolioComponent }       from './portfolio/portfolio.component';
+import { SkillsComponent }          from './skills/skills.component';
+import { BlogComponent }            from './blog/blog.component';
+import { ContactComponent }         from './contact/contact.component';
 
-// Variables
+// Services
+// import { SkillsService }            from './skills/skills.service';
 
-const appRoutes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent
-  }, {
-    path: 'portfolio',
-    component: PortfolioComponent
-  }, {
-    path: 'skills',
-    component: SkillsComponent
-  }, {
-    path: 'blog',
-    component: BlogComponent
-  }, {
-    path: 'contact',
-    component: ContactComponent
-  }, {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  { path: '**', component: HomeComponent }
-]
+// Pipes
+import { SkillLevel }               from './pipes/skill.pipe';
 
 @NgModule({
   imports:      [
     BrowserModule,
-    RouterModule.forRoot(appRoutes, { useHash: false, preloadingStrategy: PreloadAllModules })
+    AppRoutingModule,
+    HttpModule
   ],
   declarations: [
     AppComponent,
@@ -48,7 +30,11 @@ const appRoutes: Routes = [
     PortfolioComponent,
     SkillsComponent,
     BlogComponent,
-    ContactComponent
+    ContactComponent,
+    SkillLevel
+  ],
+  providers: [
+ //   SkillsService
   ],
   bootstrap:    [
     AppComponent

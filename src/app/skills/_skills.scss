@@ -1,0 +1,69 @@
+.skill-cards {
+  display: block;
+  position: relative;
+  padding: 3em 0.5em 0.5em;
+  margin: 0 auto;
+  background: $col-grey-1;
+  @include box();
+
+  h4 {
+    color: $col-blue-1;
+    font-size: 18px;
+    margin-top: 0.5em;
+  }
+  p { color: $col-blue-1; margin-bottom: 0; }
+
+  li {
+    list-style: none;
+    display: inline-block;
+    width: 25%;
+    padding: 0.5em;
+    @include box();
+
+    .skill-card {
+      background: $col-white;
+      padding: 1em;
+      color: $col-blue-1;
+      cursor: pointer;
+      position: relative;
+
+      &:before, &:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      &:before {
+        border-left: 30px solid #c7deda;
+        border-top: 30px solid transparent;
+        border-bottom: 0px solid transparent;
+      }
+      &:after {
+        border-right: 30px solid $col-grey-1;
+        border-bottom: 30px solid transparent;
+        border-top: 0px solid transparent;
+      }
+    }
+  }
+}
+
+.skill-bar {
+  background: $col-grey-1;
+  width: 100%;
+  height: 6px;
+  position: relative;
+  .skill-level {
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    background: $col-green-1;
+  }
+}
+
+
+.skill-graphic {
+  img { opacity: 1; width: 80px; }
+}

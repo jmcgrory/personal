@@ -1,1 +1,16 @@
-<h2>Skills</h2>
+<ul class="skill-cards">
+  <li *ngFor="let skill of skills" (click)="onSelect(skill)" [class.selected]="skill === selectedSkill">
+    <div class="skill-card">
+      <div class="skill-graphic">
+        <img [src]="skill.icon">
+      </div>
+      <div class="skill-bar">
+        <div class="skill-level" [style.width]="skill.value + '%'"></div>
+      </div>
+      <div class="skill-txt col-blue-1">
+        <h4>{{ skill.name }}</h4>
+        <p>{{ skill.value | skillLevel }}</p>
+      </div>
+    </div>
+  </li>
+</ul>

@@ -46,6 +46,9 @@ nav ul {
 a {
   text-decoration: none; }
 
+p {
+  margin: 0 0 1em; }
+
 .pseudo, .btn-dot-1:before, .btn-dot-1:after {
   content: ' ';
   display: block; }
@@ -157,7 +160,10 @@ a {
     #app_container .app-main .app-relative {
       position: relative;
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      overflow: scroll; }
+      #app_container .app-main .app-relative::-webkit-scrollbar {
+        display: none; }
 
 #app_header {
   position: absolute;
@@ -196,10 +202,17 @@ a {
       font-size: 22px;
       text-transform: uppercase; }
       #app_nav ul li a {
-        padding: 1em;
+        padding: 2em 1em;
         display: block;
         box-sizing: border-box;
-        -webkit-box-sizing: border-box; }
+        -webkit-box-sizing: border-box;
+        -webkit-transition: 220ms ease;
+        -moz-transition: 220ms ease;
+        -ms-transition: 220ms ease;
+        -o-transition: 220ms ease;
+        transition: 220ms ease; }
+        #app_nav ul li a.active, #app_nav ul li a:hover {
+          color: #5398b3; }
 
 #home_txt {
   width: 90%;
@@ -224,5 +237,64 @@ a {
   .bg-panel.bg-panel-develop {
     left: 50%;
     background: #fefefe; }
+
+.skill-cards {
+  display: block;
+  position: relative;
+  padding: 3em 0.5em 0.5em;
+  margin: 0 auto;
+  background: #dde8e7;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+  .skill-cards h4 {
+    color: #0e3747;
+    font-size: 18px;
+    margin-top: 0.5em; }
+  .skill-cards p {
+    color: #0e3747;
+    margin-bottom: 0; }
+  .skill-cards li {
+    list-style: none;
+    display: inline-block;
+    width: 25%;
+    padding: 0.5em;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; }
+    .skill-cards li .skill-card {
+      background: #fefefe;
+      padding: 1em;
+      color: #0e3747;
+      cursor: pointer;
+      position: relative; }
+      .skill-cards li .skill-card:before, .skill-cards li .skill-card:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0; }
+      .skill-cards li .skill-card:before {
+        border-left: 30px solid #c7deda;
+        border-top: 30px solid transparent;
+        border-bottom: 0px solid transparent; }
+      .skill-cards li .skill-card:after {
+        border-right: 30px solid #dde8e7;
+        border-bottom: 30px solid transparent;
+        border-top: 0px solid transparent; }
+
+.skill-bar {
+  background: #dde8e7;
+  width: 100%;
+  height: 6px;
+  position: relative; }
+  .skill-bar .skill-level {
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: #254444; }
+
+.skill-graphic img {
+  opacity: 1;
+  width: 80px; }
 
 /*# sourceMappingURL=styles.css.map */

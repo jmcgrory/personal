@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'home',
   templateUrl: './app/home/home.html',
 })
-export class HomeComponent  {
+export class HomeComponent {
 
   date = new Date();
   year:number = this.date.getFullYear();
