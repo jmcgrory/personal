@@ -1,6 +1,8 @@
 export class Skill {
-  name: string;
-  value: number;
-  type: string;
-  icon: string;
+  constructor(
+    public name: string,
+    public value: number,
+    public type: string,
+    public icon: string
+  ){}
 }

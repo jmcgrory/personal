@@ -16,6 +16,7 @@ export class HomeComponent {
     if( this.month < 9 || this.month == 9 && this.day < 18 ){
      this.age--;
     }
+    console.log('[home.component]');
   }
 
 }

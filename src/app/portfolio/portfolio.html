@@ -1,1 +1,5 @@
 <h2>Portfolio</h2>
+
+<ul *ngFor="let post of ports">
+  <li><strong>{{ post.name }}</strong>: {{ post.value }}</li>
+</ul>

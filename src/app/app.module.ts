@@ -13,7 +13,8 @@ import { BlogComponent }            from './blog/blog.component';
 import { ContactComponent }         from './contact/contact.component';
 
 // Services
-// import { SkillsService }            from './skills/skills.service';
+import { PortService }              from './services/port.service';
+import { SkillsService }              from './services/skills.service';
 
 // Pipes
 import { SkillLevel }               from './pipes/skill.pipe';
@@ -34,7 +35,8 @@ import { SkillLevel }               from './pipes/skill.pipe';
     SkillLevel
   ],
   providers: [
- //   SkillsService
+    PortService,
+    SkillsService
   ],
   bootstrap:    [
     AppComponent
